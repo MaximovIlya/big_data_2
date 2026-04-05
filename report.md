@@ -86,6 +86,8 @@ Here’s a step-by-step guide to running the pipeline:
 2. **Prepare the Data**:
    - Use the prepare_data.sh script to load and preprocess the data:
 
+   
+
    ```bash /app/prepare_data.sh```
 
 3. **Create the Index**:
@@ -98,5 +100,12 @@ Here’s a step-by-step guide to running the pipeline:
 
    ```bash /app/store_index.sh```
 
-5. **Search for Queries**:
-   - Run the search.sh script with different search queries:
+### 2.2 Search Queries and Results
+**Query 1: "A Child Is Bord"**
+![](screenshots/child.png)
+
+**Query 2: "love song"**
+![](screenshots/love.png)
+
+**Query 3: "artificial intelligence"**
+![](screenshots/ai.png)
