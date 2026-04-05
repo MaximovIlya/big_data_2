@@ -1,6 +1,7 @@
 # Assignment 2: Simple Search Engine using Hadoop MapReduce
 
 **Author**: Maksimov Ilya 
+
 **Repository**: https://github.com/MaximovIlya/big_data_2
 
 ## 1. Methodology
