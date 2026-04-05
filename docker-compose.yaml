@@ -18,10 +18,10 @@ services:
     hostname: cluster-master
     tty: true
     working_dir: /app
-    # entrypoint:
-    #   - bash
-    #   - /app/app.sh
-    # command: bash -c "/app/app.sh"
+    entrypoint:
+      - bash
+      - /app/app.sh
+   
     
   cluster-slave-1:
     image: firasj/spark-docker-cluster

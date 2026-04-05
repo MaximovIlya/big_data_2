@@ -1,7 +1,7 @@
 # Assignment 2: Simple Search Engine using Hadoop MapReduce
 
 Author: Maksimov Ilya 
-Repository:
+Repository: https://github.com/MaximovIlya/big_data_2
 
 ## 1. Methodology
 
@@ -78,29 +78,37 @@ To prepare the data for indexing, I followed these steps:
 
 Here’s a step-by-step guide to running the pipeline:
 
-1. **Start the Services**: 
-   - Run the following command to start the Hadoop and Spark services in Docker:
-   
-   ```bash /app/start-services.sh```
-   
-2. **Prepare the Data**:
-   - Use the prepare_data.sh script to load and preprocess the data:
 
-   
+```bash
+git clone https://github.com/MaximovIlya/big_data_2.git
+docker compose up
+```
 
-   ```bash /app/prepare_data.sh```
+This starts three containers:
+- `cluster-master`
+- `cluster-slave-1` 
+- `cassandra-server` 
 
-3. **Create the Index**:
-   - Run the create_index.sh script to generate the index:
+Once the container starts, the following scripts run automatically:
 
-   ```bash /app/create_index.sh```
+1. **Data preparation** (`prepare_data.sh`)
+2. **Indexing** (`create_index.sh` and `store_index.sh`)
 
-4. **Store the Index**:
-   - Store the created index in Cassandra using the store_index.sh script:
+After the pipeline completes successfully, the container remains active and ready to accept search queries interactively.
 
-   ```bash /app/store_index.sh```
+Once the pipeline has finished executing, you can test search queries using this command:
+```bash
+docker exec -it cluster-master bash -c "cd /app && source .venv/bin/activate && bash search.sh '<your query>'"
+```
 
-### 2.2 Search Queries and Results
+
+### 2.2 Data Preparation and Indexing Results
+Data preparation 
+![](screenshots/prepared_data.png)
+Indexing
+![](screenshots/create_index_1.png)
+![](screenshots/create_index_2.png)
+### 2.3 Search Queries and Results
 **Query 1: "A Child Is Bord"**
 ![](screenshots/child.png)
 
