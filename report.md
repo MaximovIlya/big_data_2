@@ -1,7 +1,7 @@
 # Assignment 2: Simple Search Engine using Hadoop MapReduce
 
-Author: Maksimov Ilya 
-Repository: https://github.com/MaximovIlya/big_data_2
+**Author**: Maksimov Ilya 
+**Repository**: https://github.com/MaximovIlya/big_data_2
 
 ## 1. Methodology
 
@@ -103,17 +103,24 @@ docker exec -it cluster-master bash -c "cd /app && source .venv/bin/activate && 
 
 
 ### 2.2 Data Preparation and Indexing Results
-Data preparation 
+**Data preparation**
+
 ![](screenshots/prepared_data.png)
-Indexing
+
+**Indexing**
+
 ![](screenshots/create_index_1.png)
+
 ![](screenshots/create_index_2.png)
 ### 2.3 Search Queries and Results
 **Query 1: "A Child Is Bord"**
+
 ![](screenshots/child.png)
 
 **Query 2: "love song"**
+
 ![](screenshots/love.png)
 
 **Query 3: "artificial intelligence"**
+
 ![](screenshots/ai.png)
